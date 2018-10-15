@@ -177,6 +177,9 @@ class Anagrafica {
          lista.add(a3);
          System.out.println(lista);
 //        System.out.println(a1.compareTo(a2));
+         lista.remove(a2);
+         System.out.println(lista);
+         
     }
 
 }
