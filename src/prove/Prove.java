@@ -108,35 +108,61 @@ public class Prove {
 //        System.out.println(lista.size());
 //
 //        System.out.println("Stampa");
-        Anagrafica.test();
-    }
+//       Anagrafica.test();
 
+
+                            // ESERCIZIO CON I METODO 
+
+                           
+          
+          System.out.println(concatena ("Ciao", "Come", "VA?"));
+          System.out.println(somma(1,2,3,4,5,6,5.6));
+
+    }
+                            
+        public static String concatena (String...l){
+            
+            String risultato = "Lo so:";
+            for (String elemento: l) {
+                risultato += elemento + " ";
+            }
+            return risultato; 
+        }
+        
+             public static double somma (double...numeri){
+            
+            double risultato = 0;
+            for (double elemento: numeri) {
+                risultato += elemento ;
+            }
+            return risultato; 
+        }
 }
 
-class Anagrafica {
+//class Anagrafica {
 
-    private String comune;
-    private String nominativo;
-    private SimpleDate nascita;
-
-    public Anagrafica() {
-        comune = "Rovereto";
-        nominativo = "Michele";
-        nascita = new SimpleDate();
-    }
-
-    public Anagrafica(String c, String n, String d) {
-        comune = c;
-        nominativo = n;
-        nascita = new SimpleDate(d);
-    }
-
-    public boolean equals(Anagrafica other) {
-        return ((this.nominativo.toLowerCase() == null ? other.nominativo.toLowerCase()
-                == null : this.nominativo.toLowerCase().equals(other.nominativo.toLowerCase()))
-                && (this.nascita == null ? other.nascita == null : this.nascita.equals(other.nascita)));
-
-    }
+//    private String comune;
+//    private String nominativo;
+//    private SimpleDate nascita;
+//
+//    public Anagrafica() {
+//        comune = "Rovereto";
+//        nominativo = "Michele";
+//        nascita = new SimpleDate();
+//    }
+//
+//    public Anagrafica(String c, String n, String d) {
+//        comune = c;
+//        nominativo = n;
+//        nascita = new SimpleDate(d);
+//    }
+//
+//    public boolean equals(Anagrafica other) {
+//        return ((this.nominativo.toLowerCase() == null ? other.nominativo.toLowerCase()
+//                == null : this.nominativo.toLowerCase().equals(other.nominativo.toLowerCase()))
+//                && (this.nascita == null ? other.nascita == null : this.nascita.equals(other.nascita)));
+//
+//    }
 
 //    public int compareTo(Anagrafica other) {
 //        if (this.equals(other)) {
@@ -153,36 +179,37 @@ class Anagrafica {
 //            return nominativo.toLowerCase().compareTo(other.nominativo.toLowerCase());
 //        }
 //    }
-    public int compareTo(Anagrafica other) {
-        if (nominativo.toLowerCase().compareTo(other.nominativo.toLowerCase()) == 0) {
-            if (nascita.before(other.nascita)) {
-                return -1;
-            } else {
-                return 1;
-            }
-        }
-        return nominativo.toLowerCase().compareTo(other.nominativo.toLowerCase());
-    }
-    @Override
-    public String toString(){
-        return nominativo + "-" + nascita + "-" + comune;
-    }
-    public static void test() {
-        Anagrafica a1 = new Anagrafica("Rovereto", "Michele Di Palma","10/10/1940");
-        Anagrafica a2 = new Anagrafica("Reggio E.", "Giorgiovanni","11/12/1960");
-         Anagrafica a3 = new Anagrafica("Reggio E.", "Pippo Baudo","11/02/1990");
-         ArrayList lista = new ArrayList(); 
-         lista.add(a1);
-         lista.add(a2);
-         lista.add(a3);
-         System.out.println(lista);
-//        System.out.println(a1.compareTo(a2));
-         lista.remove(a2);
-         System.out.println(lista);
-         
-    }
+//    public int compareTo(Anagrafica other) {
+//        if (nominativo.toLowerCase().compareTo(other.nominativo.toLowerCase()) == 0) {
+//            if (nascita.before(other.nascita)) {
+//                return -1;
+//            } else {
+//                return 1;
+//            }
+//        }
+//        return nominativo.toLowerCase().compareTo(other.nominativo.toLowerCase());
+//    }
+//    @Override
+//    public String toString(){
+//        return nominativo + "-" + nascita + "-" + comune;
+//    }
+//    public static void test() {
+//        Anagrafica a1 = new Anagrafica("Rovereto", "Michele Di Palma","10/10/1940");
+//        Anagrafica a2 = new Anagrafica("Reggio E.", "Giorgiovanni","11/12/1960");
+//         Anagrafica a3 = new Anagrafica("Reggio E.", "Pippo Baudo","11/02/1990");
+//         ArrayList lista = new ArrayList(); 
+//         lista.add(a1);
+//         lista.add(a2);
+//         lista.add(a3);
+//         System.out.println(lista);
+////        System.out.println(a1.compareTo(a2));
+//         lista.remove(a2);
+//         System.out.println(lista);
+//         
+//         
+//    }
 
-}
+//}
 
 //    enum Colori {
 //        giallo, verde, blu, rosso, bianco, arancione; 
