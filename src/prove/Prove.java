@@ -112,32 +112,119 @@ public class Prove {
 
 
                             // ESERCIZIO CON I METODO 
+//
+//                           
+//          
+//          System.out.println(concatena ("Ciao", "Come", "VA?"));
+//          System.out.println(somma(1,2));
+//          
+//          System.out.println(get(1, "Ciao come va", "Io sono un bambino speciale"));
 
-                           
-          
-          System.out.println(concatena ("Ciao", "Come", "VA?"));
-          System.out.println(somma(1,2,3,4,5,6,5.6));
+
+//                 System.out.println(String.format("%d",fattoriale(16)));
+
+
+                                         // GESTIONE ECCEZIONI
+           
+                                         
+            // Exception e = new Exception("Salute a te"); 
+             
+
+             //System.out.println(e); 
+            
+             
+             try{
+                 System.out.println(fattoriale(28));
+             }
+             catch(ExceptionParamNegativo | ExceptionParamToLarge e){
+                 System.out.println(e);
+             }
+           
 
     }
+    public static int fattoriale(int N) throws ExceptionParamNegativo, ExceptionParamToLarge
+        {
+            if (N < 0) {
+                throw new ExceptionParamNegativo("Argomento del fattoriale negativo\n");
+            }
+            if (N>12) {
+                throw new ExceptionParamToLarge("Argomento del fattoriale troppo grande\n");
+            }
+            if (N < 2) {
+                return 1;
+            } else {
+                int f = fattoriale(N - 1) * N;
+                return f;
+
+            }
+        }
+    }
+   
+
+ 
+
+        class ExceptionParamNegativo extends Exception{
+             private String messaggioIniziale = "";
+            
+            public ExceptionParamNegativo(String s){
+                messaggioIniziale = s;
+                System.out.println(s);
+                System.exit(404);
+            }
+            
+             @Override
+            public String toString (){
+                return "Il controllo dei parametri"
+                + "\nha avuto esito negativo."
+                + "\n" + messaggioIniziale; 
+                
+            }
+            
+        }
+      class ExceptionParamToLarge extends Exception {
+                 public ExceptionParamToLarge(String s){
+                System.out.println(s);
+                System.exit(404);
+            }
+            
+        }
+    
+    
+
                             
-        public static String concatena (String...l){
-            
-            String risultato = "Lo so:";
-            for (String elemento: l) {
-                risultato += elemento + " ";
-            }
-            return risultato; 
-        }
-        
-             public static double somma (double...numeri){
-            
-            double risultato = 0;
-            for (double elemento: numeri) {
-                risultato += elemento ;
-            }
-            return risultato; 
-        }
-}
+//        public static String concatena (String...l){
+//            
+//            String risultato = "Lo so:";
+//            for (String elemento: l) {
+//                risultato += elemento + " ";
+//            }
+//            return risultato; 
+//        }
+//        
+//             public static double somma (double...numeri){
+//            
+//            double risultato = 0;
+//            for (double elemento: numeri) {
+//                risultato += elemento*2 ;
+//            }
+//            return risultato; 
+//        }
+//              public static double somma (double i, double a){
+//            
+//            double risultato = 0;
+//            risultato = i+a;
+//            return risultato; 
+//        }
+//              
+//        public static String get(int index, String...list){
+//            
+//            if (index >= list.length) {
+//                return "Ue ciccio! Non è possibile, abbassa l'indice";
+//            }
+//            
+//            return list[index] ;
+//        }
+
 
 //class Anagrafica {
 
