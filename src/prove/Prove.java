@@ -133,62 +133,62 @@ public class Prove {
              //System.out.println(e); 
             
              
-             try{
-                 System.out.println(fattoriale(28));
-             }
-             catch(ExceptionParamNegativo | ExceptionParamToLarge e){
-                 System.out.println(e);
-             }
-           
-
-    }
-    public static int fattoriale(int N) throws ExceptionParamNegativo, ExceptionParamToLarge
-        {
-            if (N < 0) {
-                throw new ExceptionParamNegativo("Argomento del fattoriale negativo\n");
-            }
-            if (N>12) {
-                throw new ExceptionParamToLarge("Argomento del fattoriale troppo grande\n");
-            }
-            if (N < 2) {
-                return 1;
-            } else {
-                int f = fattoriale(N - 1) * N;
-                return f;
-
-            }
-        }
+//             try{
+//                 System.out.println(fattoriale(28));
+//             }
+//             catch(ExceptionParamNegativo | ExceptionParamToLarge e){
+//                 System.out.println(e);
+//             }
+//           
+//
+//    }
+//    public static int fattoriale(int N) throws ExceptionParamNegativo, ExceptionParamToLarge
+//        {
+//            if (N < 0) {
+//                throw new ExceptionParamNegativo("Argomento del fattoriale negativo\n");
+//            }
+//            if (N>12) {
+//                throw new ExceptionParamToLarge("Argomento del fattoriale troppo grande\n");
+//            }
+//            if (N < 2) {
+//                return 1;
+//            } else {
+//                int f = fattoriale(N - 1) * N;
+//                return f;
+//
+//            }
+//        }
     }
    
-
+  }
  
 
-        class ExceptionParamNegativo extends Exception{
-             private String messaggioIniziale = "";
-            
-            public ExceptionParamNegativo(String s){
-                messaggioIniziale = s;
-                System.out.println(s);
-                System.exit(404);
-            }
-            
-             @Override
-            public String toString (){
-                return "Il controllo dei parametri"
-                + "\nha avuto esito negativo."
-                + "\n" + messaggioIniziale; 
-                
-            }
-            
-        }
-      class ExceptionParamToLarge extends Exception {
-                 public ExceptionParamToLarge(String s){
-                System.out.println(s);
-                System.exit(404);
-            }
-            
-        }
-    
+//        class ExceptionParamNegativo extends Exception{
+//             private String messaggioIniziale = "";
+//            
+//            public ExceptionParamNegativo(String s){
+//                messaggioIniziale = s;
+//                System.out.println(s);
+//                System.exit(404);
+//            }
+//            
+//             @Override
+//            public String toString (){
+//                return "Il controllo dei parametri"
+//                + "\nha avuto esito negativo."
+//                + "\n" + messaggioIniziale; 
+//                
+//            }
+//            
+//        }
+//      class ExceptionParamToLarge extends Exception {
+//                 public ExceptionParamToLarge(String s){
+//                System.out.println(s);
+//                System.exit(404);
+//            }
+//            
+//        }
+//    
     
 
                             
